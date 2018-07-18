@@ -1,0 +1,6 @@
+<?php
+	$imageId = (!empty($atts['list_image'])) ? $atts['list_image']:'';
+	$image_url = wp_get_attachment_url( $imageId );
+	$image_alt = get_post_meta( $imageId, '_wp_attachment_image_alt', true);
+?>
+<img src="<?php echo esc_url($image_url);?>" alt="<?php echo esc_attr($image_alt);?>">
